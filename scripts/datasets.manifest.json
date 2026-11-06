@@ -1,0 +1,85 @@
+{
+  "manifest_version": 1,
+  "policy": "Only fetch and redistribute data after confirming the source or record licence. This manifest describes approved acquisition paths; it is not proof that data are already downloaded.",
+  "sources": [
+    {
+      "id": "cod",
+      "name": "Crystallography Open Database",
+      "canonical_url": "https://cod.psdi.ac.uk/",
+      "licence": "CC0-1.0",
+      "licence_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "allowed_action": "Download selected structure IDs as CIF; retain original author acknowledgement and COD identifiers.",
+      "bulk_policy": "Keep full snapshots out of Git; use pinned archival storage."
+    },
+    {
+      "id": "rcsb-pdb",
+      "name": "RCSB Protein Data Bank archive",
+      "canonical_url": "https://www.rcsb.org/",
+      "licence": "CC0-1.0 for PDB archive data",
+      "licence_url": "https://www.rcsb.org/pages/policies",
+      "allowed_action": "Download selected PDB/mmCIF entries; check integrated external resource annotations individually.",
+      "bulk_policy": "Do not bundle the archive; cache curated entries and preserve PDB IDs and authors."
+    },
+    {
+      "id": "open-reaction-database",
+      "name": "Open Reaction Database",
+      "canonical_url": "https://open-reaction-database.org/",
+      "licence": "CC-BY-SA-4.0; raw data not approved for automatic student-facing publication",
+      "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "allowed_action": "Use the schema and record metadata as a research reference. Any later record subset must be independently teacher-screened for age-appropriate educational use and preserve attribution/share-alike.",
+      "bulk_policy": "No raw procedure bulk import into the student product. Curate a safe educational subset only after educator review, provenance verification and explicit publication approval."
+    },
+    {
+      "id": "pubchem",
+      "name": "PubChem",
+      "canonical_url": "https://pubchem.ncbi.nlm.nih.gov/",
+      "licence": "Mixed contributor provenance; review source-level terms",
+      "allowed_action": "Use only educator-approved classroom structure records; preserve CID and per-record/source provenance.",
+      "bulk_policy": "No unrestricted lookup or bulk mirror in the student product. Add further structures only after educator review, rate-limit requests, and verify contributor terms before redistribution."
+    },
+    {
+      "id": "nist-webbook",
+      "name": "NIST Chemistry WebBook SRD 69",
+      "canonical_url": "https://webbook.nist.gov/chemistry/",
+      "licence": "Reference-only pending explicit reuse permission",
+      "allowed_action": "Link/cite record pages and query only as permitted by the service terms.",
+      "bulk_policy": "Do not mirror or redistribute the corpus until permissions are confirmed."
+    },
+    {
+      "id": "ciaaw",
+      "name": "CIAAW",
+      "canonical_url": "https://ciaaw.org/atomic-weights.htm",
+      "licence": "Official reference; confirm reuse before republishing tables",
+      "licence_url": "https://ciaaw.org/atomic-weights.htm",
+      "allowed_action": "Link/cite 2024 or later official standard atomic-weight data; transcribe only after terms check.",
+      "bulk_policy": "Do not assume every table may be redistributed without conditions."
+    },
+    {
+      "id": "iupac-gold-book",
+      "name": "IUPAC Gold Book",
+      "canonical_url": "https://goldbook.iupac.org/",
+      "licence": "Verify current term and compilation reuse terms",
+      "licence_url": "https://goldbook.iupac.org/",
+      "allowed_action": "Link to canonical terms; write original explanations with citations.",
+      "bulk_policy": "Do not mirror complete content without confirming current rights."
+    },
+    {
+      "id": "rdkit",
+      "name": "RDKit",
+      "canonical_url": "https://github.com/rdkit/rdkit",
+      "licence": "BSD-3-Clause software",
+      "licence_url": "https://github.com/rdkit/rdkit/blob/master/license.txt",
+      "allowed_action": "Use as a software dependency with required notices; evaluate browser/WASM support.",
+      "bulk_policy": "Not a dataset; pin code version and dependencies."
+    },
+    {
+      "id": "phet",
+      "name": "PhET Chemistry simulations",
+      "canonical_url": "https://phet.colorado.edu/en/simulations/browse?subjects=chemistry",
+      "licence": "Check CC BY-NC 4.0 and individual asset terms",
+      "licence_url": "https://phet.colorado.edu/en/licensing",
+      "allowed_action": "Benchmark teaching approaches; build original simulations unless reuse permission is confirmed.",
+      "bulk_policy": "Do not bundle competitor simulation code/assets as a shortcut."
+    }
+  ]
+}

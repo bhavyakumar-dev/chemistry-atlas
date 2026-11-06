@@ -1,0 +1,78 @@
+export type Grade = '10' | '11' | '12';
+export type Track = 'CISCE' | 'CBSE' | 'JEE' | 'JEE_ADVANCED' | 'NEET';
+export type Chapter = { id: string; title: string; group: string; minutes: number; lessons: number; description: string; progress?: number };
+
+export const curriculum: Record<Grade, Chapter[]> = {
+  '10': [
+    { id: 'periodic', title: 'Periodic Properties & Variation', group: 'Inorganic chemistry', minutes: 95, lessons: 6, description: 'Explore periodicity, atomic size, metallic character, ionisation potential, electron affinity and electronegativity.', progress: 78 },
+    { id: 'bonding', title: 'Chemical Bonding', group: 'Inorganic chemistry', minutes: 120, lessons: 8, description: 'Understand electrovalent, covalent and coordinate bonds through electron-dot structures and 3D geometry.', progress: 42 },
+    { id: 'acids', title: 'Acids, Bases & Salts', group: 'Physical chemistry', minutes: 105, lessons: 7, description: 'Connect ions, indicators, pH, neutralisation and salt preparation to observable chemistry.' },
+    { id: 'analytical', title: 'Analytical Chemistry', group: 'Practical chemistry', minutes: 70, lessons: 5, description: 'Identify ions through reactions with ammonium hydroxide and sodium hydroxide.' },
+    { id: 'mole10', title: 'Mole Concept & Stoichiometry', group: 'Physical chemistry', minutes: 130, lessons: 9, description: 'Move confidently between mass, moles, particles, gas volumes and balanced equations.' },
+    { id: 'electrolysis', title: 'Electrolysis', group: 'Physical chemistry', minutes: 115, lessons: 8, description: 'Follow ion migration, electrode reactions and applications of electrolysis.' },
+    { id: 'metallurgy', title: 'Metallurgy', group: 'Inorganic chemistry', minutes: 80, lessons: 5, description: 'Study ores, extraction of aluminium, alloys and their uses.' },
+    { id: 'compounds', title: 'Study of Compounds', group: 'Inorganic chemistry', minutes: 160, lessons: 11, description: 'Study hydrogen chloride, ammonia, nitric acid and sulphuric acid with conditions and observations.' },
+    { id: 'organic10', title: 'Organic Chemistry', group: 'Organic chemistry', minutes: 140, lessons: 10, description: 'Build foundations in carbon compounds, homologous series, nomenclature and hydrocarbons.' },
+  ],
+  '11': [
+    { id: 'basic-concepts', title: 'Some Basic Concepts of Chemistry', group: 'Physical chemistry', minutes: 160, lessons: 11, description: 'Measurements, mole concept, chemical combination laws, formulae and stoichiometry.', progress: 64 },
+    { id: 'atomic', title: 'Structure of Atom', group: 'Physical chemistry', minutes: 180, lessons: 12, description: 'Quantum numbers, orbitals, spectra, electronic configuration and atomic models.', progress: 23 },
+    { id: 'periodicity11', title: 'Classification & Periodicity', group: 'Inorganic chemistry', minutes: 110, lessons: 8, description: 'Understand the long-form periodic table and periodic trends.' },
+    { id: 'bonding11', title: 'Chemical Bonding & Molecular Structure', group: 'Inorganic chemistry', minutes: 190, lessons: 13, description: 'VSEPR, hybridisation, molecular orbital theory, resonance and hydrogen bonding.' },
+    { id: 'thermo11', title: 'Chemical Thermodynamics', group: 'Physical chemistry', minutes: 180, lessons: 12, description: 'Systems, first law, enthalpy, Hess law and thermochemical calculations.' },
+    { id: 'equilibrium11', title: 'Equilibrium', group: 'Physical chemistry', minutes: 190, lessons: 13, description: 'Chemical equilibrium, ionic equilibrium, pH, buffers and solubility product.' },
+    { id: 'redox11', title: 'Redox Reactions', group: 'Inorganic chemistry', minutes: 95, lessons: 7, description: 'Oxidation numbers, balancing redox equations and electron transfer.' },
+    { id: 'organic-principles', title: 'Organic Chemistry: Principles & Techniques', group: 'Organic chemistry', minutes: 210, lessons: 14, description: 'Nomenclature, isomerism, electronic effects, reaction intermediates and purification.' },
+    { id: 'hydrocarbons11', title: 'Hydrocarbons', group: 'Organic chemistry', minutes: 165, lessons: 11, description: 'Alkanes, alkenes, alkynes and aromatic hydrocarbons.' },
+  ],
+  '12': [
+    { id: 'solutions12', title: 'Solutions', group: 'Physical chemistry', minutes: 150, lessons: 10, description: 'Concentration, Raoult law, colligative properties and van’t Hoff factor.', progress: 31 },
+    { id: 'electrochem12', title: 'Electrochemistry', group: 'Physical chemistry', minutes: 175, lessons: 12, description: 'Galvanic cells, electrode potentials, Nernst equation, conductance and electrolysis.' },
+    { id: 'kinetics12', title: 'Chemical Kinetics', group: 'Physical chemistry', minutes: 145, lessons: 10, description: 'Rate laws, order, integrated equations, half-life and activation energy.' },
+    { id: 'dfblock12', title: 'd- and f-Block Elements', group: 'Inorganic chemistry', minutes: 120, lessons: 8, description: 'Electronic configuration, trends, transition-metal properties and important compounds.' },
+    { id: 'coordination12', title: 'Coordination Compounds', group: 'Inorganic chemistry', minutes: 155, lessons: 10, description: 'Nomenclature, bonding, isomerism, geometry and applications.' },
+    { id: 'halo12', title: 'Haloalkanes & Haloarenes', group: 'Organic chemistry', minutes: 140, lessons: 9, description: 'Structure, preparation, nucleophilic substitution and elimination reactions.' },
+    { id: 'alcohols12', title: 'Alcohols, Phenols & Ethers', group: 'Organic chemistry', minutes: 135, lessons: 9, description: 'Structure, preparation, properties and reactions of oxygen-containing compounds.' },
+    { id: 'carbonyl12', title: 'Aldehydes, Ketones & Carboxylic Acids', group: 'Organic chemistry', minutes: 165, lessons: 11, description: 'Carbonyl chemistry, nucleophilic addition, oxidation, reduction and acidity.' },
+    { id: 'nitrogen12', title: 'Organic Compounds Containing Nitrogen', group: 'Organic chemistry', minutes: 115, lessons: 8, description: 'Amines, diazonium salts, basicity and characteristic reactions.' },
+    { id: 'biomolecules12', title: 'Biomolecules', group: 'Organic chemistry', minutes: 100, lessons: 7, description: 'Carbohydrates, proteins, vitamins, nucleic acids and their biological roles.' },
+  ],
+};
+
+export const modelOptions = [
+  { id: 'water', name: 'Water', formula: 'H₂O', shape: 'Bent · 104.5°', detail: 'A polar molecule with two O–H bonds and two lone pairs on oxygen.', atoms: 3, bonds: 2 },
+  { id: 'co2', name: 'Carbon dioxide', formula: 'CO₂', shape: 'Linear · 180°', detail: 'Two polar C=O bonds arranged symmetrically, making the molecule non-polar overall.', atoms: 3, bonds: 2 },
+  { id: 'methane', name: 'Methane', formula: 'CH₄', shape: 'Tetrahedral · 109.5°', detail: 'Four equivalent C–H bonds point toward the vertices of a tetrahedron.', atoms: 5, bonds: 4 },
+  { id: 'ammonia', name: 'Ammonia', formula: 'NH₃', shape: 'Trigonal pyramidal · 107°', detail: 'A lone pair on nitrogen compresses the H–N–H bond angles.', atoms: 4, bonds: 3 },
+  { id: 'oxygen', name: 'Oxygen', formula: 'O₂', shape: 'Linear · 120 pm', detail: 'A diatomic molecule with a double bond and a triplet ground state.', atoms: 2, bonds: 1 },
+  { id: 'benzene', name: 'Benzene', formula: 'C₆H₆', shape: 'Planar hexagon · 120°', detail: 'Six carbon atoms form a delocalised aromatic ring with equalised C–C bonds.', atoms: 12, bonds: 12 },
+  { id: 'nacl', name: 'Sodium chloride pair', formula: 'NaCl', shape: 'Ionic pair', detail: 'An electrostatic attraction between a sodium cation and a chloride anion; the solid forms an extended ionic lattice.', atoms: 2, bonds: 1 },
+  { id: 'nacl-lattice', name: 'Rock-salt lattice', formula: 'NaCl', shape: 'Cubic lattice', detail: 'A simplified 3 × 3 × 3 alternating-ion model of the rock-salt crystal structure.', atoms: 27, bonds: 54 },
+  { id: 'atomic-carbon', name: 'Carbon atom', formula: '₆C', shape: 'Bohr shell model', detail: 'A schematic carbon atom with six electrons: two in the first shell and four in the second. Shells are not literal electron paths.', atoms: 7, bonds: 0 },
+  { id: 's-orbital', name: 's orbital', formula: 's', shape: 'Spherical probability region', detail: 'An idealised s-orbital probability cloud. The shaded sphere represents a region of electron probability, not a hard boundary.', atoms: 1, bonds: 0 },
+  { id: 'p-orbital', name: 'p orbital', formula: 'p', shape: 'Two-lobed probability region', detail: 'A simplified p-orbital with two lobes separated by a nodal plane through the nucleus.', atoms: 2, bonds: 0 },
+];
+
+export const experiments = [
+  { id: 'titration', title: 'Acid–base titration', category: 'Volumetric analysis', level: 'Guided + free', duration: '8–12 min', description: 'Find the concentration of an unknown acid using a standard base and an indicator.', tag: 'ISC practical' },
+  { id: 'electrolysis', title: 'Electrolysis cell', category: 'Electrochemistry', level: 'Guided + free', duration: '6–10 min', description: 'Observe ion migration and electrode reactions as a potential difference is applied.', tag: '3D-ready' },
+  { id: 'kinetics', title: 'Reaction-rate explorer', category: 'Chemical kinetics', level: 'Free exploration', duration: '5–8 min', description: 'Vary concentration, temperature and catalyst to see how reaction rate changes.', tag: 'Interactive' },
+  { id: 'equilibrium', title: 'Equilibrium chamber', category: 'Chemical equilibrium', level: 'Guided + free', duration: '7–10 min', description: 'Apply a stress to a reversible reaction and observe the new equilibrium state.', tag: 'ISC XI' },
+  { id: 'ph', title: 'pH & indicator studio', category: 'Acids and bases', level: 'Free exploration', duration: '4–6 min', description: 'Compare common solutions and see how indicators respond to pH.', tag: 'ICSE X' },
+  { id: 'crystal', title: 'Crystallisation lab', category: 'Separation techniques', level: 'Guided', duration: '5–7 min', description: 'Explore saturation, cooling and crystal formation through a safe model.', tag: 'Practical skills' },
+];
+
+export const quizQuestions = [
+  { question: 'Which molecule has a bent molecular geometry?', options: ['CO₂', 'H₂O', 'CH₄', 'BeCl₂'], answer: 1, explanation: 'Water has two bond pairs and two lone pairs around oxygen. The lone-pair repulsions compress the H–O–H angle to about 104.5°.' },
+  { question: 'What is the SI unit for amount of substance?', options: ['Gram', 'Molecule', 'Mole', 'Litre'], answer: 2, explanation: 'The mole (mol) is the SI base unit for amount of substance.' },
+  { question: 'At the equivalence point of a strong acid–strong base titration at 25°C, the pH is approximately:', options: ['3', '5', '7', '9'], answer: 2, explanation: 'At equivalence, the acid and base have reacted in stoichiometric amounts. For a strong acid–strong base system at 25°C, the solution is approximately neutral.' },
+  { question: 'Which species acts as the oxidising agent in a redox reaction?', options: ['The species that loses electrons', 'The species that gains electrons', 'The species with the most atoms', 'The solvent'], answer: 1, explanation: 'An oxidising agent accepts electrons and is itself reduced.' },
+];
+
+export const diyGuides = [
+  { id: 'indicator', title: 'Make a natural pH indicator', subtitle: 'Red cabbage chemistry', time: '20 min', level: 'Beginner', supplies: 'Red cabbage, warm water, transparent cups, household liquids such as diluted vinegar and baking-soda solution.', steps: ['Chop a few red-cabbage leaves and place them in a heat-safe bowl.', 'Ask an adult to pour warm water over the leaves; allow the purple colour to diffuse.', 'Cool and filter the liquid into a clean transparent cup.', 'Add small samples of safe household liquids to separate cups of indicator.', 'Record the colour changes and compare them with acidic, neutral and basic behaviour.'], science: 'Red cabbage contains anthocyanin pigments. Their molecular structure changes with pH, producing different colours.', safety: 'Use only clearly labelled household samples, never taste mixtures, avoid bleach or drain cleaners, wear eye protection and wash hands afterwards.' },
+  { id: 'chromatography', title: 'Separate marker pigments', subtitle: 'Paper chromatography', time: '25 min', level: 'Beginner', supplies: 'Washable water-based marker, filter paper or coffee filter, glass, water, pencil and tape.', steps: ['Cut a strip of filter paper and draw a pencil baseline near one end.', 'Place a small dot of washable marker ink on the baseline.', 'Add a shallow layer of water to a glass, keeping the ink spot above the waterline.', 'Suspend the paper so its lower edge touches the water.', 'Watch the solvent rise and separate the pigments; remove the strip before the solvent reaches the top.'], science: 'Different pigments travel at different rates because they interact differently with the mobile solvent and the stationary paper.', safety: 'Use washable, water-based markers only. Keep the setup away from electrical equipment and do not drink the water.' },
+  { id: 'crystals', title: 'Grow salt crystals', subtitle: 'Solubility and crystallisation', time: '2–3 days', level: 'Beginner', supplies: 'Table salt, warm water, clean glass jar, spoon, cotton thread and pencil.', steps: ['With adult supervision, dissolve salt into warm water a spoonful at a time until no more dissolves.', 'Pour the clear solution into a clean jar, leaving undissolved material behind.', 'Tie a thread to a pencil and suspend it in the solution without touching the bottom.', 'Leave the jar undisturbed in a safe place and observe crystal growth over several days.', 'Record changes in crystal size and shape.'], science: 'As water slowly evaporates, the solution becomes supersaturated and dissolved ions can arrange into an ordered crystal lattice.', safety: 'Do not heat water yourself. Do not ingest the solution or crystals; label the jar and keep it away from pets and young children.' },
+  { id: 'density', title: 'Build a density column', subtitle: 'Density and miscibility', time: '15 min', level: 'Beginner', supplies: 'Clear tall glass, water, food colouring, cooking oil and a spoonful of sugar dissolved in water.', steps: ['Prepare coloured water and a separate concentrated sugar solution.', 'Carefully add the sugar solution to the glass.', 'Slowly add coloured water down the inside wall, then add a small layer of cooking oil.', 'Observe the arrangement and allow the liquids to settle.', 'Record which liquids mix and which remain as separate layers.'], science: 'The layers illustrate differences in density and the fact that oil and water are immiscible. The precise order depends on the concentration of the sugar solution.', safety: 'Use food-grade materials only, do not taste the mixtures, keep glass on a stable surface and wipe spills promptly.' },
+  { id: 'evaporation', title: 'Compare evaporation rates', subtitle: 'Intermolecular forces and phase change', time: '30–60 min', level: 'Beginner', supplies: 'Two shallow plates, water, a fan (optional), measuring spoon and a timer.', steps: ['Measure equal small volumes of water into two shallow plates.', 'Place one plate in still air and the other in a gently ventilated location.', 'Keep both away from heat sources and direct sunlight.', 'Observe the liquid level at equal time intervals.', 'Compare the conditions and explain the change in evaporation rate.'], science: 'Evaporation occurs when surface molecules have enough energy to enter the gas phase. Air movement can remove vapour near the surface and increase the rate.', safety: 'Use water only. Keep plates away from electrical equipment and do not use flames or heating devices.' },
+];

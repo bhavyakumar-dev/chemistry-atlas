@@ -1,0 +1,19 @@
+name = "chemistry-atlas"
+compatibility_date = "2026-11-04"
+pages_build_output_dir = "./dist"
+
+# Create the D1 database first, then replace the placeholder with its ID.
+# Example: npx wrangler d1 create chemistry-atlas-db
+[[d1_databases]]
+binding = "DB"
+database_name = "chemistry-atlas-db"
+database_id = "REPLACE_WITH_D1_DATABASE_ID"
+migrations_dir = "migrations"
+
+# Cloudflare Workers AI binding used by /api/tutor and /api/teacher/analytics.
+[ai]
+binding = "AI"
+
+[[r2_buckets]]
+binding = "PORTFOLIOS"
+bucket_name = "chemistry-atlas-portfolios"

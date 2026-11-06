@@ -1,0 +1,34 @@
+{
+  "name": "chemistry-atlas",
+  "private": true,
+  "version": "0.5.3",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "tsc -b && vite build",
+    "build:editions": "tsc -b && node scripts/build-editions.mjs",
+    "datasets:download": "node scripts/download-open-data.mjs",
+    "preview": "vite preview --host 0.0.0.0",
+    "typecheck": "tsc -b --pretty",
+    "validate:content": "node scripts/validate-content.mjs",
+    "validate:schema": "node scripts/validate-schema.mjs",
+    "validate:syntax": "node scripts/validate-syntax.mjs",
+    "validate:security": "node scripts/validate-security.mjs",
+    "validate:all": "npm run validate:syntax && npm run validate:content && npm run validate:chemistry && npm run validate:schema && npm run validate:security",
+    "validate:chemistry": "node scripts/validate-chemistry.mjs"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "lucide-react": "^0.468.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "three": "^0.171.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@types/three": "^0.171.0",
+    "typescript": "~5.7.2",
+    "vite": "^6.0.7"
+  }
+}
