@@ -1,4 +1,4 @@
-# Chemistry Atlas content inventory — V1/V2 curriculum foundation with V5 governance · 0.5.3
+# Chemistry Atlas content inventory — V1/V2 curriculum foundation with V5 governance · 0.5.4
 
 | Content area | Coverage in this source | Notes |
 |---|---:|---|

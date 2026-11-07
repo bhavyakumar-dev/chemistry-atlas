@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.5.4 — V5 build fixes · 7 November 2026
+
+- Defined the missing `filteredModels` collection from the typed `modelOptions` data and the existing model search input.
+- Added the missing `ExternalLink` icon import used by the edition navigation links.
+- No feature or data model was removed.
+- `src/App.tsx` passed the installed global TypeScript TSX parser and targeted source checks. A full dependency-backed `npm run build:editions` could not be completed in the patching environment because project dependencies (`react`, `three`, `lucide-react`, Vite and their type packages) were not installed and the package installation attempt timed out.
+
+
 ## 0.5.3 — V5 tutor and analytics trust-boundary refinement · 4 November 2026
 
 - Keep tutor system instructions static; learner-supplied grade, track and chapter context now remains user-role metadata.

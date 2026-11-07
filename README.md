@@ -1,4 +1,4 @@
-# Chemistry Atlas — V5 Precision & Quality preview · 0.5.3
+# Chemistry Atlas — V5 Precision & Quality preview · 0.5.4
 
 Chemistry Atlas is a free-to-learn, non-commercial and ad-free chemistry-learning platform for ICSE Class 10, ISC Classes 11–12, and mapped CBSE, JEE Main, JEE Advanced enrichment and NEET pathways. The frontend uses React, TypeScript and Three.js. Cloudflare Pages Functions provide optional authenticated services using D1, Workers AI and R2.
 

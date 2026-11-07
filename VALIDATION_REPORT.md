@@ -1,4 +1,4 @@
-# Chemistry Atlas V5 0.5.3 — Validation report
+# Chemistry Atlas V5 0.5.4 — Validation report
 
 **Date:** 4 November 2026  
 **Scope:** TypeScript/TSX syntax, authored content and feature registry, equation-balancer regression cases, SQLite migrations/queries, API/security helper smoke tests, build scripts, JSON/YAML manifests and archive integrity.

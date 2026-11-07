@@ -1,6 +1,6 @@
 # Chemistry Atlas V5 — source-level bug and reliability audit
 
-**Release:** 0.5.3 · **Audit date:** 4 November 2026
+**Release:** 0.5.4 · **Audit date:** 4 November 2026
 
 This document records defects and risks identified during the available source review, the changes made, and the regression checks. It does not claim that every possible bug has been found. Full dependency-backed build, real-browser/device testing, a live Cloudflare environment and educator review are not available in this workspace.
 

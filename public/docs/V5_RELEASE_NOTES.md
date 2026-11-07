@@ -1,6 +1,6 @@
 # Chemistry Atlas V5 — Precision, Safety & Quality
 
-**Package version:** 0.5.3  
+**Package version:** 0.5.4  
 **Date:** 4 November 2026  
 **Release type:** quality-preview source release
 

@@ -1,6 +1,6 @@
 # Chemistry Atlas V5 — 50 advanced feature registry
 
-**Release:** 0.5.3 · **Last updated:** 4 November 2026
+**Release:** 0.5.4 · **Last updated:** 4 November 2026
 
 Each entry is a governed feature record. Status is based on the source in this release; a roadmap item is not an implemented feature. A V5 rollout toggle is available only for `available` and `preview` entries whose integration exists. Planned items are locked.
 

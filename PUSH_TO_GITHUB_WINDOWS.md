@@ -4,7 +4,7 @@ The connected GitHub integration in the preparation session rejected repository 
 
 The public repository already contains its MIT `LICENSE`. Use a fresh clone so that its existing `main` history and licence are preserved.
 
-1. Download `chemistry-atlas-v5-0.5.3.zip` and extract it.
+1. Download `chemistry-atlas-v5-0.5.4.zip` and extract it.
 2. Open PowerShell in a parent folder and clone the repository:
 
    ```powershell
@@ -21,7 +21,7 @@ The public repository already contains its MIT `LICENSE`. Use a fresh clone so t
    npm run typecheck
    npm run build:editions
    git add -A
-   git commit -m "feat: release Chemistry Atlas V5 0.5.3 quality preview"
+   git commit -m "feat: release Chemistry Atlas V5 0.5.4 quality preview"
    git push origin main
    ```
 
