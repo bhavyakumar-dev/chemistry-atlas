@@ -5,9 +5,8 @@ import {
   Activity, Atom, Award, BookOpen, Bookmark, Check, ChevronDown, ChevronRight, Download,
   Clock3, FlaskConical, GraduationCap, LayoutDashboard, Lightbulb, Menu,
   MessageCircle, Moon, MoreHorizontal, NotebookPen, Plus, Play, RotateCcw,
-  Search, Settings, ShieldCheck, Sparkles, Sun, Target, Users, X, Zap,
-  ClipboardList, Send, LogIn, LogOut, FileText, Upload, Beaker, ListChecks,
-} from 'lucide-react';
+  Search, Settings, ShieldCheck, Sparkles, Sun, Target, Users, X, Zap, ExternalLink,
+  ClipboardList, Send, LogIn, LogOut, FileText, Upload, Beaker, ListChecks,} from 'lucide-react';
 import { curriculum, diyGuides, experiments, modelOptions, type Grade, type Track } from './data';
 import { boardLessons, lessonById } from './content/lessons';
 import { courseTracks, jeeAdvancedCourse, type CourseUnit, syllabusSources } from './content/tracks';
@@ -333,6 +332,9 @@ function App() {
   const [featureFlagsBusy, setFeatureFlagsBusy] = useState(false);
 
   const activeModel = modelOptions.find((m) => m.id === modelId) || modelOptions[0];
+  const filteredModels = modelOptions.filter((model) =>
+    `${model.name} ${model.formula} ${model.shape}`.toLowerCase().includes(modelSearch.trim().toLowerCase()),
+  );
   const todayLabel = new Intl.DateTimeFormat('en-IN', { weekday: 'long', day: '2-digit', month: 'long', year: 'numeric' }).format(new Date()).toUpperCase();
   const appRootPath = window.location.pathname.includes('/versions/') ? `${window.location.pathname.split('/versions/')[0]}/` : window.location.pathname.replace(/\/?$/, '/');
   const greeting = new Date().getHours() < 12 ? 'Good morning' : new Date().getHours() < 17 ? 'Good afternoon' : 'Good evening';
